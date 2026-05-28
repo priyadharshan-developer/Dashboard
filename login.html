@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <!-- Tailwind CDN (IMPORTANT) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e1b4b] text-white">
+
+<!-- Login Card -->
+<div class="bg-white/10 backdrop-blur-lg p-10 rounded-2xl shadow-xl w-[350px]">
+
+    <h2 class="text-3xl font-bold text-center mb-6 text-purple-400">
+        Welcome Back
+    </h2>
+
+    <!-- Username -->
+    <input id="username"
+        placeholder="Username"
+        class="w-full p-3 mb-4 bg-black/40 rounded-lg outline-none">
+
+    <!-- Password -->
+    <input id="password"
+        type="password"
+        placeholder="Password"
+        class="w-full p-3 mb-6 bg-black/40 rounded-lg outline-none">
+
+    <!-- Button -->
+    <button onclick="login()"
+        class="w-full bg-purple-500 py-3 rounded-lg shadow-lg shadow-purple-500/40 hover:scale-105 transition">
+        Login
+    </button>
+
+    <!-- Error -->
+    <p id="errorMsg" class="text-red-400 text-center mt-4 hidden">
+        Invalid Username or Password
+    </p>
+
+</div>
+
+<script>
+function login() {
+    let u = document.getElementById("username").value;
+    let p = document.getElementById("password").value;
+
+    if (u === "Priyadharshan" && p === "Pri@123") {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "index.html";
+    } else {
+        document.getElementById("errorMsg").classList.remove("hidden");
+    }
+}
+</script>
+
+</body>
+</html>

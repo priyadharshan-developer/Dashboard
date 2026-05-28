@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Pri",
+    "attendance": 95,
+    "subjects": [
+      { "name": "Java", "marks": 95 },
+      { "name": "Python", "marks": 86 },
+      { "name": "C#", "marks": 89 }
+    ]
+  },
+  {
+    "name": "Tom",
+    "attendance": 90,
+    "subjects": [
+      { "name": "Java", "marks": 75 },
+      { "name": "Python", "marks": 69 },
+      { "name": "C#", "marks": 90}
+    ]
+  }
+]
